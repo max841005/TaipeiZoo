@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="entity"
+            type="com.cst.taipeizoo.data.entities.AnimalContentEntity" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_ch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@{entity.nameCh}"
+                android:textSize="@dimen/text_size_l"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                tools:text="名稱名稱" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_la"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{entity.nameLa}"
+                android:textSize="@dimen/text_size_l"
+                app:layout_constraintEnd_toEndOf="@+id/name_ch"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/name_ch"
+                tools:text="NameNameName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/category_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/category"
+                android:textSize="@dimen/text_size_l"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/name_la" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{entity.category}"
+                app:layout_constraintEnd_toEndOf="@+id/name_ch"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/category_title"
+                tools:text="界門綱目科屬種" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/distribution_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/distribution"
+                android:textSize="@dimen/text_size_l"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/distribution"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{entity.distribution}"
+                app:layout_constraintEnd_toEndOf="@+id/name_ch"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/distribution_title"
+                tools:text="雨林雨林雨林雨林雨林雨林雨林雨林" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/feature_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/feature"
+                android:textSize="@dimen/text_size_l"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/distribution" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/feature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{entity.feature}"
+                app:layout_constraintEnd_toEndOf="@+id/name_ch"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/feature_title"
+                tools:text="瘦小瘦小瘦小瘦小瘦小瘦小瘦小瘦小瘦小瘦小瘦小" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/behavior_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/behavior"
+                android:textSize="@dimen/text_size_l"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/feature" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/behavior"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{entity.behavior}"
+                app:layout_constraintEnd_toEndOf="@+id/name_ch"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/behavior_title"
+                tools:text="貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃貪吃" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/latest_updated_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/latest_updated"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/name_ch"
+                app:layout_constraintTop_toBottomOf="@+id/behavior" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/latest_updated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{entity.latestDate}"
+                app:layout_constraintBaseline_toBaselineOf="@+id/latest_updated_title"
+                app:layout_constraintStart_toEndOf="@+id/latest_updated_title"
+                tools:text="2017/9/29" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

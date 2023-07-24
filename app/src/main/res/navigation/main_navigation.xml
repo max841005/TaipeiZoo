@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/list_fragment">
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="com.cst.taipeizoo.ui.main.list.ListFragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_list_fragment_to_place_fragment"
+            app:destination="@id/place_fragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/place_fragment"
+        android:name="com.cst.taipeizoo.ui.main.list.place.PlaceFragment"
+        tools:layout="@layout/fragment_list" >
+
+        <action
+            android:id="@+id/action_place_fragment_to_animal_fragment"
+            app:destination="@id/animal_fragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/animal_fragment"
+        android:name="com.cst.taipeizoo.ui.main.list.animal.AnimalFragment"
+        tools:layout="@layout/fragment_animal_content" />
+
+</navigation>
